@@ -44,6 +44,13 @@ public class SignUpActivity extends AppCompatActivity {
             MyAlert myAlert = new MyAlert();
             myAlert.myDialog(this, R.drawable.doremon48,
                     "มีช่องว่าง", "กรุณากรอก ทุกช่องคะ");
+        } else if (!(passwordString.equals(rePasswordString))) {
+            // Password False
+            MyAlert myAlert = new MyAlert();
+            myAlert.myDialog(this, R.drawable.nobita48,
+                    "Password ไม่ตรงกัน", "กรุณากรอก Password ให้เหมือนๆ กันคะ");
+        } else {
+            // Password OK
         }
 
 
