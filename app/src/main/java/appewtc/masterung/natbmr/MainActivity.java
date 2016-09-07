@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String urlLogo = "http://swiftcodingthai.com/natt/ImageMaster/logo_bmi_master.png";
     private EditText userEditText, passwordEditText;
     private ImageView imageView;
+    private String userString, passwordString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,24 @@ public class MainActivity extends AppCompatActivity {
         Picasso.with(this).load(urlLogo).resize(180,180).into(imageView);
 
     }   // Main Method
+
+    public void clickSignIn(View view) {
+
+        userString = userEditText.getText().toString().trim();
+        passwordString = passwordEditText.getText().toString().trim();
+
+        //Check SPace
+        if (userString.equals("") || passwordString.equals("")) {
+            //Have Space
+            MyAlert myAlert = new MyAlert();
+            myAlert.myDialog(this, R.drawable.bird48, "Have Space",
+                    "Please Fill All Every Blank");
+        } else {
+            //No Space
+
+        }
+
+    }   // clickSignIn
 
     public void clickSignUpMain(View view) {
         startActivity(new Intent(MainActivity.this, SignUpActivity.class));
