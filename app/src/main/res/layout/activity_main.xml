@@ -63,5 +63,17 @@
             android:hint="Password"
             android:textColor="@color/text"
             android:textColorHint="@color/text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="www.office365Thailand.com"
+            android:id="@+id/textView6"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:onClick="clickWebSite" />
     </LinearLayout>
 </RelativeLayout>

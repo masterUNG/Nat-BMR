@@ -1,6 +1,7 @@
 package appewtc.masterung.natbmr;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText userEditText, passwordEditText;
     private ImageView imageView;
     private String userString, passwordString;
+    private static final String urlOffice365 = "http://www.office365thailand.com";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,15 @@ public class MainActivity extends AppCompatActivity {
         Picasso.with(this).load(urlLogo).resize(180,180).into(imageView);
 
     }   // Main Method
+
+    public void clickWebSite(View view) {
+
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(urlOffice365));
+        startActivity(intent);
+
+    }   // clickWebSite
+
 
     public void clickSignIn(View view) {
 
