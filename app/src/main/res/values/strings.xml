@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Nat BMR</string>
+
+    <string name="signin">Sign In</string>
+    <string name="signup">Sign Up</string>
+    <string name="name">ชื่อ - นามสกุล:</string>
+    <string name="user">User :</string>
+    <string name="password1">Password :</string>
+    <string name="passowrd2">Re-Password :</string>
+
+
 </resources>
