@@ -123,7 +123,10 @@ public class MainActivity extends AppCompatActivity {
                     // Password True
                     Toast.makeText(context, "Welcome " + loginStrings[1],
                             Toast.LENGTH_SHORT).show();
-
+                    Intent intent = new Intent(MainActivity.this, ServiceActivity.class);
+                    intent.putExtra("Login", loginStrings);
+                    startActivity(intent);
+                    finish();
                 }
 
             } catch (Exception e) {
